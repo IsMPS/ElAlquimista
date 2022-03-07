@@ -66,8 +66,232 @@ public class MainApp {
 	private JLabel lblReaccion_2;
 	private JLabel lblReaccion_3;
 	private JLabel lblReaccion_4;
+	private JPanel panel;
 	
+	// Setters de los booleanos:
+	public boolean isAgua() {
+		return agua;
+	}
 
+	public JPanel getPanel() {
+		return panel;
+	}
+
+	public void setPanel(JPanel panel) {
+		this.panel = panel;
+	}
+
+	public void setAgua(boolean agua) {
+		this.agua = agua;
+	}
+
+	public boolean isFuego() {
+		return fuego;
+	}
+
+	public void setFuego(boolean fuego) {
+		this.fuego = fuego;
+	}
+
+	public boolean isTierra() {
+		return tierra;
+	}
+
+	public void setTierra(boolean tierra) {
+		this.tierra = tierra;
+	}
+
+	public boolean isAire() {
+		return aire;
+	}
+
+	public void setAire(boolean aire) {
+		this.aire = aire;
+	}
+
+	public boolean isVapor() {
+		return vapor;
+	}
+
+	public void setVapor(boolean vapor) {
+		this.vapor = vapor;
+	}
+
+	public boolean isLluvia() {
+		return lluvia;
+	}
+
+	public void setLluvia(boolean lluvia) {
+		this.lluvia = lluvia;
+	}
+
+	public boolean isBarro() {
+		return barro;
+	}
+
+	public void setBarro(boolean barro) {
+		this.barro = barro;
+	}
+
+	public boolean isHumo() {
+		return humo;
+	}
+
+	public void setHumo(boolean humo) {
+		this.humo = humo;
+	}
+
+	public boolean isLava() {
+		return lava;
+	}
+
+	public void setLava(boolean lava) {
+		this.lava = lava;
+	}
+
+	public boolean isPlanta() {
+		return planta;
+	}
+
+	public void setPlanta(boolean planta) {
+		this.planta = planta;
+	}
+
+	public boolean isCristal() {
+		return cristal;
+	}
+
+	public void setCristal(boolean cristal) {
+		this.cristal = cristal;
+	}
+
+	public boolean isArena() {
+		return arena;
+	}
+
+	public void setArena(boolean arena) {
+		this.arena = arena;
+	}
+
+	public boolean isCeramica() {
+		return ceramica;
+	}
+
+	public void setCeramica(boolean ceramica) {
+		this.ceramica = ceramica;
+	}
+
+	public JButton getBtnAgua() {
+		return btnAgua;
+	}
+
+	public void setBtnAgua(JButton btnAgua) {
+		this.btnAgua = btnAgua;
+	}
+
+	public JButton getBtnFuego() {
+		return btnFuego;
+	}
+
+	public void setBtnFuego(JButton btnFuego) {
+		this.btnFuego = btnFuego;
+	}
+
+	public JButton getBtnTierra() {
+		return btnTierra;
+	}
+
+	public void setBtnTierra(JButton btnTierra) {
+		this.btnTierra = btnTierra;
+	}
+
+	public JButton getBtnAire() {
+		return btnAire;
+	}
+
+	public void setBtnAire(JButton btnAire) {
+		this.btnAire = btnAire;
+	}
+
+	public JButton getBtnVapor() {
+		return btnVapor;
+	}
+
+	public void setBtnVapor(JButton btnVapor) {
+		this.btnVapor = btnVapor;
+	}
+
+	public JButton getBtnLava() {
+		return btnLava;
+	}
+
+	public void setBtnLava(JButton btnLava) {
+		this.btnLava = btnLava;
+	}
+
+	public JButton getBtnArena() {
+		return btnArena;
+	}
+
+	public void setBtnArena(JButton btnArena) {
+		this.btnArena = btnArena;
+	}
+
+	public JButton getBtnLluvia() {
+		return btnLluvia;
+	}
+
+	public void setBtnLluvia(JButton btnLluvia) {
+		this.btnLluvia = btnLluvia;
+	}
+
+	public JButton getBtnHumo() {
+		return btnHumo;
+	}
+
+	public void setBtnHumo(JButton btnHumo) {
+		this.btnHumo = btnHumo;
+	}
+
+	public JButton getBtnBarro() {
+		return btnBarro;
+	}
+
+	public void setBtnBarro(JButton btnBarro) {
+		this.btnBarro = btnBarro;
+	}
+
+	public JButton getBtnCeramica() {
+		return btnCeramica;
+	}
+
+	public void setBtnCeramica(JButton btnCeramica) {
+		this.btnCeramica = btnCeramica;
+	}
+
+	public JButton getBtnCristal() {
+		return btnCristal;
+	}
+
+	public void setBtnCristal(JButton btnCristal) {
+		this.btnCristal = btnCristal;
+	}
+
+	public JButton getBtnPlanta() {
+		return btnPlanta;
+	}
+
+	public void setBtnPlanta(JButton btnPlanta) {
+		this.btnPlanta = btnPlanta;
+	}
+
+	public JButton getBtnChuletas() {
+		return btnChuletas;
+	}
+
+	public void setBtnChuletas(JButton btnChuletas) {
+		this.btnChuletas = btnChuletas;
+	}
 
 	/**
 	 * Launch the application.
@@ -101,7 +325,7 @@ public class MainApp {
 		frame.getContentPane().setBackground(new Color(221, 216, 196));
 		frame.getContentPane().setLayout(null);
 		
-		JPanel panel = new JPanel();
+		panel = new JPanel();
 		panel.setBackground(new Color(221, 216, 196));
 		panel.setBounds(313, 24, 421, 274);
 		frame.getContentPane().add(panel);
@@ -310,55 +534,55 @@ public class MainApp {
 		if(agua&&fuego) {
 			if(!btnVapor.isVisible()) {
 			btnVapor.setVisible(true);
-			JOptionPane.showMessageDialog(frame, "La reacción entre fuego y agua ha creado el botón vapor");
+			// JOptionPane.showMessageDialog(frame, "La reacción entre fuego y agua ha creado el botón vapor");
 		}
 		}
 		if(agua&&aire) {
 			if(!btnLluvia.isVisible()) {
 			btnLluvia.setVisible(true);
-			JOptionPane.showMessageDialog(frame, "La reacción entre agua y aire ha creado el botón lluvia");
+			// JOptionPane.showMessageDialog(frame, "La reacción entre agua y aire ha creado el botón lluvia");
 			}
 		}
 		if(agua&&tierra) {
 			if(!btnBarro.isVisible()) {
 			btnBarro.setVisible(true);
-			JOptionPane.showMessageDialog(frame, "La reacción entre agua y tierra ha creado el botón barro");
+			// JOptionPane.showMessageDialog(frame, "La reacción entre agua y tierra ha creado el botón barro");
 			}
 		}
 		if(fuego&&aire) {
 			if(!btnHumo.isVisible()) {
 			btnHumo.setVisible(true);
-			JOptionPane.showMessageDialog(frame, "La reacción entre fuego y aire ha creado el botón humo");
+			// JOptionPane.showMessageDialog(frame, "La reacción entre fuego y aire ha creado el botón humo");
 			}
 		}
 		if(fuego&&tierra) {
 			if(!btnLava.isVisible()) {
 			btnLava.setVisible(true);
-			JOptionPane.showMessageDialog(frame, "La reacción entre fuego y tierra ha creado el botón lava");
+			// JOptionPane.showMessageDialog(frame, "La reacción entre fuego y tierra ha creado el botón lava");
 			}
 		}
 		if(tierra&&aire) {
 			if(!btnArena.isVisible()) {
 			btnArena.setVisible(true);
-			JOptionPane.showMessageDialog(frame, "La reacción entre tierra y aire ha creado el botón arena");
+			// JOptionPane.showMessageDialog(frame, "La reacción entre tierra y aire ha creado el botón arena");
 			}
 		}
 		if(tierra&&lluvia) {
 			if(!btnPlanta.isVisible()) {
 			btnPlanta.setVisible(true);
-			JOptionPane.showMessageDialog(frame, "La reacción entre tierra y lluvia ha creado el botón planta");
+			// JOptionPane.showMessageDialog(frame, "La reacción entre tierra y lluvia ha creado el botón planta");
 			}
 		}
 		if(fuego&&barro) {
 			if(!btnCeramica.isVisible()) {
 			btnCeramica.setVisible(true);
-			JOptionPane.showMessageDialog(frame, "La reacción entre fuego y barro ha creado el botón cerámica");
+			// JOptionPane.showMessageDialog(frame, "La reacción entre fuego y barro ha creado el botón cerámica");
 			}
 		}
 		if(fuego&&arena) {
 			if(!btnCristal.isVisible()) {
 			btnCristal.setVisible(true);
-			JOptionPane.showMessageDialog(frame, "La reacción entre fuego y arena ha creado el botón cristal");
+			// JOptionPane.showMessageDialog(frame, "La reacción entre fuego y arena ha creado el botón cristal");
 			}
 		}
 		if(contador ==2) {
